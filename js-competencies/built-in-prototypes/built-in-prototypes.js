@@ -10,11 +10,11 @@
 
 function dragonMapper(arr) {
   let newArr = arr.map(element => {
-    console.log(element);
-    `${element} ...here be dragons`;
-    console.log(element);
+    // console.log(element);
+    return `${element}...here be dragons`;
+    // console.log(element);
   });
-  console.log(newArr);
+  // console.log(newArr);
   return newArr;
 }
 

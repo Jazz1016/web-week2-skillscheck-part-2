@@ -1,6 +1,5 @@
 //+++++++++ Start Here! All problems are below. +++++++++//
 
-
 //////////////////PROBLEM 1////////////////////
 
 //Finish the function addDucks by writing a for loop that loops
@@ -9,15 +8,15 @@
 //for-loop's iterator with "let" instead of "var", and call it "i"
 
 function addDucks(arr, ind) {
-
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] += "Duck";
+  }
   //WRITE YOUR FOR-LOOP HERE
   //For your iterator, declare it with the let keyword, and name it "i"
-  
 
   //DO NOT TOUCH THIS
-  return [arr, ind]
+  return [arr, ind];
 }
-
 
 //////////////////PROBLEM 2////////////////////
 //Within the if statement below, declare a variable
@@ -26,11 +25,12 @@ function addDucks(arr, ind) {
 //invocation within the if statement.
 
 if (true) {
+  let color = "red";
+
   //CODE HERE
 
-
   //DO NOT TOUCH THIS LINE
-  getter.get(color)
+  getter.get(color);
 }
 
 //////////////////PROBLEM 3////////////////////
@@ -38,8 +38,9 @@ if (true) {
 //and call it "greetingsEarthlings"
 //Assign it the value of "Hello".
 
-//Code here
+const greetingsEarthlings = "Hello";
 
+//Code here
 
 //////////////////PROBLEM 4////////////////////
 //Create a function called madLib that takes in a
@@ -51,14 +52,17 @@ if (true) {
 //You MUST use a template string! If you need to
 //look it up, check out the documentation.
 
-//Code here
+let madLib = str => {
+  return `${str}, my dear Watson.`;
+};
 
+//Code here
 
 //////////////////PROBLEM 5////////////////////
 //Based on the following code, answer the question below:
 
-var arr = ["hey", "hi", "ciao"]
-var obj = { a: "a", b: "b", c: "c" }
+var arr = ["hey", "hi", "ciao"];
+var obj = { a: "a", b: "b", c: "c" };
 // Example A: [1, 2, 3, ...obj]
 // Example B: [1, 2, 3, ...arr]
 // Example C: {one: 1, two: 2, ...obj}
@@ -68,19 +72,22 @@ var obj = { a: "a", b: "b", c: "c" }
 //comment out the arrays below which list the correctly
 //used spread operators.
 
-// var answers = ["Example A", "Example B", "Example C", "Example D"]
-// var answers = ["Example B", "Example C", "Example D"]
+// var answers = ["Example A", "Example B", "Example C", "Example D"];
+var answers = ["Example B", "Example C", "Example D"];
 // var answers = ["Example A", "Example B"]
 // var answers = ["Example C", "Example D"]
-
 
 //////////////////PROBLEM 6////////////////////
 //Create an arrow function called "cleanUp". It should
 //take in a string, remove all the spaces, and return the
 //string without spaces.
 
-//Code here
+let cleanUp = str => {
+  str.trim("");
+  return str;
+};
 
+//Code here
 
 //////////////////PROBLEM 7////////////////////
 //Finish the function below. Assume that the
@@ -89,9 +96,9 @@ var obj = { a: "a", b: "b", c: "c" }
 //Return ocean.
 
 function whatOcean(obj) {
-
+  let { ocean } = obj;
+  return ocean;
   //Code here
-  
 }
 
 //////////////////PROBLEM 8////////////////////
@@ -104,4 +111,7 @@ function whatOcean(obj) {
 //plus the last element of the rest parameter, like so:
 //"spaghetti & liver with onions"
 
-
+let leftovers = (str, ...rest) => {
+  console.log(rest.pop);
+  return `${str} & ${rest.pop()}`;
+};
